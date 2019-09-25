@@ -317,7 +317,53 @@ C1 1 2 2.2n
 \subsection{Conclusion}
 Nous pouvons conclure qu'avec la simulation, nous avons bien trouvé -3dB avec le curseur pour la fréquence de coupure de F$_0 \approx$ 15,3kHz.
 
+\section{Exercice 4}
+Dans le but de calculer la forme d'onde s(t) quand e(t) est un échelon de tension d'amplitude E$_0$ = $\SI{3}{\volt}$ On donne R$_1$ = 3,3 k$\Omega$ ; R$_2$ = 6,8 k$\Omega$ ; R$_3$ = 4,7 k$\Omega$ ; C = 100 μF.
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{Exo4/Exo4.PNG}\\
+    \textit{Circuit exercice 4}
+\end{center}
+\subsection{Théorie}
+Sur ce circuit nous allons appliquer le théorème de Thévenin pour simplifier:\\
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{Exo4/Exo4-1.PNG}\\
+    \textit{Circuit avec application Thévenin (1)}
+\end{center}
 
+Maintenant nous remarquons un pont diviseur, ce qui donne:
+
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{Exo4/Exo4-2.PNG}\\
+    \textit{Application de pont diviseur(2)}
+\end{center}
+
+\begin{itemize}
+    \item Notre tension à vide est: 
+        \begin{center}
+            $e'=e\times\frac{R_2}{R_1+R_2}$
+        \end{center}
+    \item Pour calculer R', nous avons besoin de connaître l'intensité de court-circuit. On pose (via schéma (1)):
+        \begin{center}
+            U$_3$ = $e'\times\frac{R_{23}}{R_1+R23}$\\
+            $I_{cc} = \frac{U_3}{R_3} = e'\times\frac{R_{23}}{R_3\times(R_1+R23)}$
+            R'=$\frac{e'}{I_{cc}} = \frac{R_3\times(R_1+R_{23})}{R_{23}}$
+        \end{center}
+\end{itemize}
+
+De ce fait, le circuit devient: 
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{Exo4/Exo4-3.PNG}\\
+\end{center}
+On peut alors poser: 
+\begin{center}
+    $e'(t) = R'\times I + s(t) = R'\times C\frac{ds}{dt} + s(t) $
+\end{center}
+
+
+\subsection{Simulation}
+\subsubsection{Création fichier .cir}
+\subsubsection{Résultat de la simulation dans le fichier .out}
+\subsection{Conclusion}
 
 
 
