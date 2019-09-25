@@ -359,23 +359,85 @@ On peut alors poser:
     $e'(t) = R'\times I + s(t) = R'\times C\frac{ds}{dt} + s(t) $
 \end{center}
 
-
 \subsection{Simulation}
 \subsubsection{Création fichier .cir}
-\subsubsection{Résultat de la simulation dans le fichier .out}
-\subsection{Conclusion}
-
-
-
-
-
-\end{document}
-
 \begin{minted}[
     baselinestretch=1.4,
     bgcolor=LightGray,
     fontsize=\footnotesize]
 {bash}
-
+V1 1 0 pulse (0 3 2m 0 0 2 2)
+R1 1 2 3.3k
+R2 2 0 6.8k
+R3 2 3 4.7k
+C1 3 0 100u
+.TRAN 8m 8
+.PROBE
+.END
 \end{minted}
-\times% Symbole x en math
+\subsubsection{Résultat de la simulation dans le fichier .out}
+\begin{center}
+    \includegraphics[width=\textwidth]{Exo4/Exo4-4.PNG}
+\end{center}
+\subsection{Conclusion}
+
+Nous pouvons remarquer que la tension de V(3) tend vers 2V.
+
+\section{Exercice 5}
+Le but étant de connaître s(t) en régime établi.
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{Exo5-6/Exo5.PNG}\\
+\end{center}
+\subsection{Fichier .cir}
+\begin{minted}[
+    baselinestretch=1.4,
+    bgcolor=LightGray,
+    fontsize=\footnotesize]
+{php}
+Exercice5
+* Execrice 5
+V1 0 1 DC=2
+V2 2 0 sin(0 1 30k 0 0)
+R1 1 3 4.7k
+R  3 0 4.7k
+C  2 3 2.2n
+.TRAN 10n 400u 0 10n
+.PROBE
+.END
+\end{minted}
+\subsection{Simulation}
+\begin{center}
+    \includegraphics[width=\textwidth]{Exo5-6/Exo5-1.PNG}\\
+    \textit{Résultat de la simulation}
+\end{center}
+
+\section{Exercice 6}
+Le but est de donner f$_0$, (= $\omega$0/2$\pi$) sa fréquence propre sans amortissement,
+z, son coefficient d’amortissement réduit, f$_R$, sa fréquence de résonance.
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{Exo5-6/Exo6.PNG}\\
+\end{center}
+
+\subsection{Simulation}
+\begin{minted}[
+    baselinestretch=1.4,
+    bgcolor=LightGray,
+    fontsize=\footnotesize]
+{php}
+Exercice6
+* Exercice 6
+
+Ve 1 0 PULSE(-1 1 0 30u 30u 20u 100u)
+R1 1 2 500
+L1 2 3 200m
+C1 3 0 1.2665n
+.TRAN 10n 5m 0 10n
+.PROBE
+.END
+\end{minted}
+
+\begin{center}
+    \includegraphics[width=\textwidth]{Exo5-6/Exo6-1.PNG}
+\end{center}
+
+\end{document}
