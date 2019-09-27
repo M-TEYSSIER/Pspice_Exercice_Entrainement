@@ -1,0 +1,10 @@
+Exercice4
+* Exercice 4
+V1 1 0 pulse (0 3 2m 0 0 2 2)
+R1 1 2 3.3k
+R2 2 0 6.8k
+R3 2 3 4.7k
+C1 3 0 100u
+.TRAN 8m 8
+.PROBE
+.END

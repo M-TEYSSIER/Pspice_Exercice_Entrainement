@@ -1,0 +1,11 @@
+Exo un 
+* fichier exo 1.cir
+V1 1 0 DC=1
+V2 2 0 DC=2
+I1  3 0 1m
+R1 1 4 3.3k
+R3 3 4 4.7k
+R2 2 4 6.8k
+R4 4 0 2.2k
+.OP
+.end

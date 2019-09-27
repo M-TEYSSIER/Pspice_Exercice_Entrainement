@@ -1,0 +1,10 @@
+Exercice5
+* Execrice 5
+V1 0 1 DC=2
+V2 2 0 sin(0 1 30k 0 0)
+R1 1 3 4.7k
+R  3 0 4.7k
+C  2 3 2.2n
+.TRAN 10n 400u 0 10n
+.PROBE
+.END

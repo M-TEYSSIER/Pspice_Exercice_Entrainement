@@ -1,0 +1,10 @@
+Exercice6
+* Exercice 6
+
+Ve 1 0 PULSE(-1 1 0 30u 30u 20u 100u)
+R1 1 2 500
+L1 2 3 200m
+C1 3 0 1.2665n
+.TRAN 10n 5m 0 10n
+.PROBE
+.END

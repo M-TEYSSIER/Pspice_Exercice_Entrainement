@@ -1,0 +1,11 @@
+Exercice2
+* Exercice 2
+V1 0 1 DC=1
+R1 1 2 1
+R2 2 3 3.3
+R3 3 4 2.2
+R4 2 4 6.8
+R5 4 0 8.2
+R6 2 0 4.7
+.OP
+.END

@@ -1,0 +1,10 @@
+Exercice3
+* Exercice 3
+
+Ve 1 0 AC=1
+R1 2 0 4.7k
+C1 1 2 2.2n
+
+.AC DEC 1000 100 100k
+.PROBE
+.END
